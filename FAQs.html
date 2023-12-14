@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <title>Wheelz on the South</title>
+    </head>
+<body>
+<!--navbar-->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbarcolor">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img class="logo" src="media/logo.jpg">Wheelz on the South</a>
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header text-white border-bottom">
+                        <a href="index.html" style="text-decoration: none;" class="offcanvas-title" id="offcanvasNavbarLabel"><img class="logo" src="media/logo.jpg">Wheelz on the South</a>
+                        <button type="button" class="btn-close btn-close-white shadow-none p-4" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+                        <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <button class="dropbtn"><a href="products.html" style="text-decoration: none;">Products</a></button>
+                                        <div class="dropdown-content">
+                                            <a href="products.html#productswheels">Wheels</a>
+                                            <a href="products.html#productstires">Tires</a>
+                                            <a href="products.html#productsseats">Seats</a>
+                                        </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="FAQs.html">FAQ's</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#reviews">Customer's Reviews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="FAQs.html#aboutus">About Us</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                            <div class="shopping header-icon">
+                                <i class='bx bx-cart-alt' ></i>
+                                <span class="quantity">0</span>
+                            </div>
+                            <button type="button" class="btn loginbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                                <i class='bx bx-log-in' id="loginicon"></i>&nbspLog In
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <modal>
+        <div class="modal fade" id="staticBackdrop1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content wrapper" id="body1">
+                    <div class="modal-body">
+                        <form class="formbg needs-validation" novalidate>
+                            <h1>Log In</h1>
+                            <div class="input-box">
+                                <input type="text email" placeholder="Username/Email Address" required>
+                                <i class='bx bxs-user'></i>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter your Username or Email Address.
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <input type="password" placeholder="Password" required>
+                                <i class='bx bxs-lock-alt' ></i>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter your password.
+                                </div>
+                            </div>
+                    
+                            <div class="remember-forgot">
+                                <label><input type="checkbox"> Remember me</label>
+                                <p>Forgot password?<a href="#"> Click here!</a></p>
+                            </div>
+                    
+                            <button type="submit" class="loginbtn">Log In</button>
+                    
+                            <div class="register-link">
+                                <p>By logging in, you agree to the <b><a href="terms.html">Terms and Conditions</a></b> and<b><a href="privacy.html"> Privacy Policy</a></b>.</p>
+                                <p>Don't have an account?<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop1Signup" style="color: #08E9F1;">
+                                    Register here!
+                                </button></a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="staticBackdrop1Signup" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content wrapper" id="body1">
+                    <div class="modal-body">
+                        <form class="formbg needs-validation" novalidate>
+                            <h1>Sign Up</h1>
+                            <div class="input-box">
+                                <input type="text" placeholder="Full Name" required>
+                                <i class='bx bxs-user'></i>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter your Full Name.
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <input type="email" placeholder="Email Address" required>
+                                <i class='bx bx-envelope'></i>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter your Email Address.
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <input type="password" placeholder="Password" required>
+                                <i class='bx bxs-lock-alt' ></i>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter your password.
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <input type="password" placeholder="Confirm Password" required>
+                                <i class='bx bxs-lock-alt' ></i>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please confirm your password.
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <input type="number" placeholder="Phone Number" required>
+                                <i class='bx bx-phone' ></i>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter your Phone Number.
+                                </div>
+                            </div>
+                    
+                            <button type="submit" class="loginbtn">Signup</button>
+                    
+                            <div class="register-link">
+                                <p>By signing up, you agree to the <b><a href="terms.html">Terms and Conditions</a></b> and<b><a href="privacy.html"> Privacy Policy</a></b>.</p>
+                                <p>Already have an account?<button type="button" class="btn data-bs-toggle="modal" data-bs-target="#staticBackdrop1" style="color: #08E9F1;">
+                                    Log in here!
+                                </button></a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </modal>
+<!--navbar-->
+<br>
+<br>
+<br>
+<!--main page-->
+<section class="backgroundmain">
+    <div class="container">
+        <div class="faqs-heading">
+            <h1>FREQUENTLY ASKED QUESTIONS</h1>
+        </div>
+    </div>
+</section>
+<section class="backgroundmain">
+    <div class="container">
+        <div class="faqs-heading">
+            <h2>What are my payment options?</h2>
+        </div>
+        <ul class="paymentmethod">
+            <li><p>PayPal</p></li>
+            <li><p>All major Credit and Debit Cards</p></li>
+                <ul><li><p>No need to create a PayPal account just proceed to “Continue as Guest”</p></li></ul>
+            <li><p>Cash / Credit Card on Delivery with an initial reservation fee of P5,000 or 50% of the purchase price for orders below P5,000.</p></li>
+            <li><p>Fund Transfer through our Bank Partners (BDO, Eastwest Bank and Unionbank)</p></li>
+        </ul>
+    </div>
+    <br>
+    <div class="container">
+        <div class="faqs-heading">
+            <h2>How do I get my purchase?</h2>
+        </div>
+        <ul class="paymentmethod">
+            <li><p>Free delivery for all orders over P10,000. A delivery fee of P500 for orders below P10,000 within Metro Manila. Shipping charges may vary for deliveries outside Metro Manila.</p></li>
+            <li><p>Store pick-up with free installation in our Dubshop Stores (Banawe and Makati branch). Stores are open from Mondays to Saturdays - 9am to 6pm.</p></li>
+        </ul>
+    </div>
+    <br>
+    <div class="container">
+        <div class="faqs-heading">
+            <h2>When do I receive my purchase?</h2>
+        </div>
+        <ul class="paymentmethod">
+            <li><p>Orders are processed and shipped within 24 to 48 hours from your order confirmation date, unless otherwise specified. Deliveries may vary for orders outside Metro Manila.</p></li>
+        </ul>
+    </div>
+    <br>
+    <div class="container">
+        <div class="faqs-heading">
+            <h2>What if I change my mind about my purchase?</h2>
+        </div>
+        <ul class="paymentmethod">
+            <li><p>You may message us directly for concerns regarding change of item. Generally, it is possible to change given that the items have not been used or mounted. </p></li>
+        </ul>
+    </div>
+    <br>
+    <div class="container">
+        <div class="faqs-heading">
+            <h2>What if I order the wrong item that won’t fit my car?</h2>
+        </div>
+        <ul class="paymentmethod">
+            <li><p>Prior to completing your order, you will be asked to type your car make and model. This will be reviewed when processing your order before shipment. In certain cases, we may require a photo of your car to assure that the item/s will fit. </p></li>
+        </ul>
+    </div>
+    <br>
+    <div class="container">
+        <div class="faqs-heading">
+            <h2>What is your Warranty Policy?</h2>
+        </div>
+        <ul class="paymentmethod">
+            <li><p>All products have a warranty of 180 days from the date the product was received by the customer. The warranty only covers a replacement for a defective part unless such a replacement cannot be obtained. For such cases, a full refund will be issued to the customer. For more information about our warranty, please read our Return Policy prior to check out. </p></li>
+        </ul>
+    </div>
+<br>
+<br id="aboutus">
+</section>
+<section class="backgroundmain">
+    <div class="container">
+        <div class="faqs-heading">
+            <h1>ABOUT WHEELZ ON THE SOUTH</h1>
+        </div>
+    </div>
+</section>
+<section class="backgroundmain">
+    <div class="container">
+        <div class="faqs-heading">
+            <h3>Welcome to the Wheelz on the South</h3>
+            <h5>At WheelZ On The South, we're not just about wheels; we're about a lifestyle fueled by a passion for automotive excellence. Nestled in the heart of Philippines, our team is dedicated to providing you with the ultimate experience in automotive customization and performance.</h5>
+        </div><br>
+        <div class="faqs-heading">
+            <h3>Who we are?</h3>
+            <h5>We were born out of a shared love for all things automotive. Our journey began with a simple idea – to transform ordinary rides into extraordinary expressions of individuality. As enthusiasts ourselves, we understand that your vehicle is an extension of your personality, and we're here to help you make a statement on the road.</h5>
+        </div><br>
+        <div class="faqs-heading">
+            <h3>Our Mission:</h3>
+            <h5>Our mission is to elevate your driving experience by offering a curated selection of high-quality wheels, tires, and performance upgrades. We believe in pushing boundaries, embracing innovation, and delivering unparalleled service. Whether you're seeking to enhance your vehicle's performance, style, or both, WheelZ On The South is your trusted partner in the pursuit of automotive excellence.</h5>
+        </div><br>
+        <div class="faqs-heading">
+            <h3>Why Choose WheelZ On The South?</h3>
+            <h5><b>Expertise:</b> Our team consists of automotive enthusiasts and experts who bring a wealth of knowledge to every project.</h5>
+            <h5><b>Quality:</b> We source our products from reputable brands known for their craftsmanship and durability.</h5>
+            <h5><b>Customer-Centric Approach: </b> Your satisfaction is our priority. We're committed to providing personalized solutions that exceed your expectations.
+            </h5>
+        </div><br>
+        <div class="faqs-heading">
+            <h3>Connect With Us:</h3>
+            <h5>We invite you to join the WheelZ On The South community. Follow us on social media to stay updated on the latest trends, product releases, and exciting projects. Whether you're a seasoned gearhead or just starting your automotive journey, we're here to inspire and assist you every step of the way.</h5>
+        </div><br>
+    </div>
+</section>
+<!--main page-->
+<script>
+    (() => {
+    'use strict'
+
+    
+    const forms = document.querySelectorAll('.needs-validation')
+
+
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+        }, false)
+    })
+    })()
+</script>
+<!--footer-->
+<div>
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="https://www.facebook.com/WheelzOnTheSouth" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/wheelzonthesouth.co/?fbclid=IwAR1CuKpRbYJqfAv5c8lIgNFukOLHj0hLH1kaJYH3xnN1Pt4dIx16RV47wzo" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@wheelzonthesouthofficial?fbclid=IwAR30Y_QVFWXXWRRxDUZhMt6VUlmmuebAVDBHCniTVLUFbWASy-q1CATi9O8" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@wheelzonthesouth1690" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <p class="copyrights"><i class='bx bxs-map' ></i>National Hwy, 1770 Muntinlupa, Philippines 1773 Muntinlupa City, Philippines<br><i class='bx bxs-phone' ></i> 09081826915&nbsp;<i class='bx bxs-envelope' ></i>wheelzonthesouth@gmail.com</p>
+        </div>
+        <div class="footerBottom">
+            <p>© 2023 Wheelz on the South; Designed by <span class="designer">Peter C. & Archie K.</span></p>
+        </div>
+    </footer>
+</div>
+<!--footer-->
+</body>
+</html>
